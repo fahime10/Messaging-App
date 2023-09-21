@@ -1,6 +1,25 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.green {
+  background-color: rgb(45, 116, 82);
+  height: 20vh;
+}
+
+.cream {
+  background-color: rgb(234, 232, 232);
+  height: 80vh;
+}
+
+.content {
+  position: relative;
+  bottom: 90vh;
+  margin: 0 9%;
+  padding: 1rem;
+  background-color: honeydew;
+  border-radius: 10px;
 }
 
 a {
