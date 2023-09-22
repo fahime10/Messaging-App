@@ -73,3 +73,17 @@ exports.sign_up_form_post = [
         }
     })
 ];
+
+exports.login_post = passport.authenticate('local', {
+    successRedirect: '/messages_list',
+    failureRedirect: '/'
+});
+
+exports.logout = (req, res, next) => {
+    req.logout(function (err) {
+        if (err) {
+            return next(err);
+        }
+        res.redirect('/');
+    });
+}

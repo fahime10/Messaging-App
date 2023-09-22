@@ -6,20 +6,49 @@ body {
 .green {
   background-color: rgb(45, 116, 82);
   height: 20vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .cream {
   background-color: rgb(234, 232, 232);
   height: 80vh;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 100vw;
 }
 
 .content {
   position: relative;
-  bottom: 95vh;
+  top: 10vh;
   margin: 0 9%;
   padding: 1rem;
   background-color: honeydew;
   border-radius: 10px;
+}
+
+.contacts {
+  position: relative;
+  top: 10vh;
+  margin: 0 1%;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+.contact {
+  display: grid;
+  border: 2px solid grey;
+}
+
+.contact img {
+  grid-column-start: 1;
+}
+
+.contact p {
+  grid-column-start: 2;
 }
 
 a {
