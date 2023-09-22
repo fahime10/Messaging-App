@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1= title 
+
+    div(class='row')
+        div(class='col-sm-3')
+            div(class='sidebar')
+                each message in messages_list 
+                    div(class='contact')
+                        img(src='../images/anonymous.png' style='width: 45px; height: 45px;')
+                        p #{message.recipient.firstName + " " + message.recipient.lastName}
+                        p #{message.text}
