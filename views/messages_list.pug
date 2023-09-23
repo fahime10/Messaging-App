@@ -6,8 +6,17 @@ block content
     div(class='row')
         div(class='col-sm-3')
             div(class='sidebar')
+                div(class='user')
+                    img(src='../images/account.png' style='width: 45px; height: 45px;')
+                    button.btn.btn-info(type='button' class='logout') Logout
+                    img(src='../images/message.png' style='width: 28px; height: 28px;' class='focusable')
+                    img(src='../images/dots-vertical.png' style='width: 28px; height: 28px;' class='focusable')
+                div(class='input-group mb-3')
+                    div(class='input-group-prepend')
+                        img(src='../images/magnify.png' class='input-group-text' class='focusable' style='width: 45px; height: 40px;')
+                    input(class='form-control rounded' type='text' placeholder='Search or start new chat')
                 each message in messages_list 
                     div(class='contact')
-                        img(src='../images/anonymous.png' style='width: 45px; height: 45px;')
+                        img(src='../images/account.png' style='width: 45px; height: 45px;')
                         p #{message.recipient.firstName + " " + message.recipient.lastName}
                         p #{message.text}
