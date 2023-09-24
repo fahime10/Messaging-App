@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function LoginPage() {
   return (
     <>
@@ -20,7 +22,9 @@ function LoginPage() {
             </form>
             <br />
             <p>Don't have an account?</p>
-            <a href="/sign-up">Sign up here</a>
+            <Link to="/sign-up">
+                <a href="/sign-up">Sign up here</a>
+            </Link>
         </div>
     </>
   );

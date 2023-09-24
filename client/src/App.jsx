@@ -1,15 +1,21 @@
 import './style.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
 
 function App() {
   return (
     <>
-      <div className="container-fluid">
+    <BrowserRouter>
+    <div className="container-fluid">
         <div className="green"></div>
         <div className="cream"></div>
-        {/* <div className="content"></div> */}
-        <LoginPage />
-      </div>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
+        </Routes>
+    </div>
+    </BrowserRouter>
     </>
   );
 }
