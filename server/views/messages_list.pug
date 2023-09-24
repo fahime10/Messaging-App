@@ -16,7 +16,9 @@ block content
                         img(src='../images/magnify.png' class='input-group-text' class='focusable' style='width: 45px; height: 40px;')
                     input(class='form-control rounded' type='text' placeholder='Search or start new chat')
                 each message in messages_list 
-                    div(class='contact')
+                    div(class='contact focusable')
                         img(src='../images/account.png' style='width: 45px; height: 45px;')
                         p #{message.recipient.firstName + " " + message.recipient.lastName}
                         p #{message.text}
+
+        div(claws='col-md-6')
