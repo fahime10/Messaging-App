@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function LoginPage() {
   return (
     <>
@@ -9,22 +7,20 @@ function LoginPage() {
                 <div className="form-group">
                     <label htmlFor="username">Username:</label>
                     <input className="form-control" type="text" placeholder="Please enter your username"
-                        name="username" required={true} /> 
+                        name="username" id="username" required={true} /> 
                 </div>
                 <br />
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
                     <input className="form-control" type="password" placeholder="Please enter your password"
-                        name="password" required={true} />
+                        name="password" id="password" required={true} />
                 </div>
                 <br />
                 <button className="btn btn-primary" type="submit">Login</button>
             </form>
             <br />
             <p>Don't have an account?</p>
-            <Link to="/sign-up">
-                <a href="/sign-up">Sign up here</a>
-            </Link>
+            <a href="/sign-up">Sign up here</a>
         </div>
     </>
   );
