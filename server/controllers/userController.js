@@ -26,7 +26,23 @@ exports.sign_up_post = asyncHandler(async(req, res, next) => {
     }
 });
 
-// exports.login_post = passport.authenticate('local', {
-//     successRedirect: '/messages_list',
-//     failureRedirect: '/'
-// });
+exports.login_post = asyncHandler(async(req, res, next) => {
+    try {
+        const user = await User.findOne({ username: req.body.username });
+
+        if (!user) {
+            res.send({ error: 'Incorrect details' });
+        }
+
+        const match = await bcrypt.compare(req.body.password, user.password);
+
+        if (!match) {
+            res.send({ error: 'Incorrect details' });
+        }
+        
+        res.send(user);
+
+    } catch (err) {
+        console.log(err);
+    }
+});

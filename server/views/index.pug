@@ -3,27 +3,3 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-
-  form(method='POST' action='')
-    div.form-group
-      label(for='username') Username: 
-      input#username.form-control(type='text'
-        placeholder='Please enter your username'
-        name='username'
-        required='true'
-        value=(undefined===username ? '' : username))
-    br    
-    div.form-group
-      label(for='password') Password: 
-      input#password.form-control(type='password'
-        placeholder='Please enter your password'
-        name='password'
-        required='true')
-    br
-    button.btn.btn-primary(type='submit') Login
-  br  
-  p Don't have an account?
-  a(href='/sign-up') Sign up here
-
-  if errors 
-    p Incorrect details
