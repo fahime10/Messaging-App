@@ -63,6 +63,10 @@ body {
   min-height: 90vh;
 }
 
+.col-sm-12 {
+  font-size: larger;
+}
+
 .sidebar {
   position: relative;
   margin-top: 1rem;
