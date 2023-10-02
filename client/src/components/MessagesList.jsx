@@ -12,17 +12,20 @@ function MessagesList() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:9000/api/messages-list", {
-            method: "POST"
-        })
-        .then((res) => res.json())
-        .then((res) => {
-            setMessages(res);
-            setCurrentUserSelected(messages[0]);
-        })
-        .catch((err) => console.log(err));
+        if (sessionStorage.getItem("user")) {
+            fetch("http://localhost:9000/api/messages-list", {
+                method: "POST"
+            })
+            .then((res) => res.json())
+            .then((res) => {
+                setMessages(res);
+                setCurrentUserSelected(messages[0]);
+            })
+            .catch((err) => console.log(err));
+        }
 
-    }, [messages]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     function logout() {
         sessionStorage.clear();
