@@ -137,3 +137,37 @@ body {
   border: 1px solid black;
   padding: 0.1rem;
 }
+
+.top {
+  display: flex;
+  justify-content: end;
+  background-color: rgb(192, 191, 191);
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.top img {
+  margin: 0.5rem 1rem 0 0;
+}
+
+.middle {
+  min-height: 70vh;
+  max-height: 70vh; 
+}
+
+.bottom {
+  display: flex;
+  background-color: rgb(192, 191, 191);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.bottom img {
+  margin: 0 0.5rem;
+}
+
+.input-bottom {
+  border-radius: 10px;
+  border-color: azure;
+  width: 60vw;
+}

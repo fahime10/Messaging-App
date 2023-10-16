@@ -4,6 +4,9 @@ import AccountImage from "../assets/images/account.png";
 import MessageImage from "../assets/images/message.png";
 import DotsVertical from "../assets/images/dots-vertical.png";
 import MagnifyImage from "../assets/images/magnify.png";
+import EmoticonImage from "../assets/images/emoticon-excited-outline.png";
+import PaperclipImage from "../assets/images/paperclip.png";
+import MicrophoneImage from "../assets/images/microphone.png";
 
 
 function MessagesList() {
@@ -34,11 +37,11 @@ function MessagesList() {
 
     return (
         <>
-            <div className="row">
-                {(sessionStorage.getItem("user")) ? 
+            {(sessionStorage.getItem("user")) ? 
+                <div className="row">
                     <div className="col-sm-3">
                         <div className="sidebar">
-                            <div className="user">
+                            <div className="user top">
                                 <img src={AccountImage} className="user-image"  />
                                 <button className="btn btn-info logout" type="button" onClick={logout}>Logout</button>
                                 <img src={MessageImage} className="focusable options-image" />
@@ -59,11 +62,28 @@ function MessagesList() {
                             ))}
                         </div>
                     </div> 
-                    :   
+                    <div className="col-sm-9">
+                        <div className="top">
+                        <img src={MagnifyImage} className="focusable options-image" />
+                            <img src={DotsVertical} className="focusable options-image" />
+                        </div>
+                        <div className="middle">
+                            <p>Todo messages</p>
+                        </div>
+                        <div className="bottom">
+                            <img src={EmoticonImage} className="focusable options-image" />
+                            <img src={PaperclipImage} className="focusable options-image" />
+                            <input type="text" placeholder="Type a message" className="input-bottom" />
+                            <img src={MicrophoneImage} className="focusable options-image" />
+                        </div>
+                    </div>
+                </div>
+                :   
+                <div className="row">
                     <div className="col-sm-12">
                         <p>Sorry, you need a valid login to see content</p>
-                    </div>}
-            </div>
+                    </div>
+                </div>}
         </>
     );
 }
